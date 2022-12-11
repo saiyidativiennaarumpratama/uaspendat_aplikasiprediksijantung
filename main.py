@@ -79,9 +79,9 @@ elif menu == 'Dataset' :
             -- Nilai 1: angina atipikal \n
             -- Nilai 2: nyeri non-angina \n
             -- Nilai 3: asimtomatik 
-        4. Trestbps: yaitu tekanan darah istirahat (dalam mm Hg saat masuk rumah sakit)
+        4. Trestbps: yaitu tekanan darah (dalam mm Hg saat masuk rumah sakit)
         5. Chol : yaitu berisi kadar kolesterol serum [mg/dl]
-        6. Fbs : yaitu gula darah puasa > 120 mg/dl, dimana : \n
+        6. Fbs : yaitu gula darah  120 mg/dl, dimana : \n
             1 = benar, dan \n
             0 = salah 
         7. Restecg : hasil elektrokardiografi istirahat, dimana : \n
