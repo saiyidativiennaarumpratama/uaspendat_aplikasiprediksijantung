@@ -244,8 +244,8 @@ elif menu == 'Modelling':
         st.write('''
         Rumus untuk menghitung bobot kemiripan (similarity) dengan Nearest Neighbor digunakan rumus Euclidean.
         ''')
-        image = Image.open('jarakecludian.png')
-        st.image(image, caption='Rumus Jarak Euclidean')
+#         image = Image.open('jarakecludian.png')
+#         st.image(image, caption='Rumus Jarak Euclidean')
         st.write(
             """##### Tujuan Algoritma K-NN """)
         st.write('''
