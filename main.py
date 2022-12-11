@@ -80,17 +80,17 @@ elif menu == 'Dataset' :
             -- Nilai 1: angina atipikal \n
             -- Nilai 2: nyeri non-angina \n
             -- Nilai 3: asimtomatik 
-        4. Trestbps: yaitu tekanan darah istirahat (dalam mm Hg saat masuk rumah sakit)
+        4. Trestbps: yaitu tekanan darah (dalam mm Hg saat masuk rumah sakit)
         5. Chol : yaitu berisi kadar kolesterol serum [mg/dl]
-        6. Fbs : yaitu gula darah puasa > 120 mg/dl, dimana : \n
+        6. Fbs : yaitu gula darah > 120 mg/dl, dimana : \n
             1 = benar, dan \n
             0 = salah 
-        7. Restecg : hasil elektrokardiografi istirahat, dimana : \n
+        7. Restecg : hasil elektrokardiografi, dimana : \n
             -- Nilai 0: normal \n
             -- Nilai 1: memiliki kelainan gelombang ST-T (inversi gelombang T dan/atau elevasi atau depresi ST > 0,05 mV) \n
             -- Nilai 2: menunjukkan kemungkinan atau pasti hipertrofi ventrikel kiri dengan kriteria Estes
         8. Thalach: Detak jantung maksimum tercapai
-        9. Exang : angina akibat olahraga, dimana :
+        9. Exang : angina akibat olahraga, dimana : \n
             1 = ya, dan \n
             0 = tidak
         10. Oldpeak : ST nilai numerik di ukur dalam depresi yang diinduksi oleh latihan relatif terhadap istirahat
