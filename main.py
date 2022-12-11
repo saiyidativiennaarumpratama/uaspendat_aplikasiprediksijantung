@@ -12,6 +12,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier, export_graphviz
 import altair as alt
+import joblib
 
 
 
@@ -79,9 +80,9 @@ elif menu == 'Dataset' :
             -- Nilai 1: angina atipikal \n
             -- Nilai 2: nyeri non-angina \n
             -- Nilai 3: asimtomatik 
-        4. Trestbps: yaitu tekanan darah (dalam mm Hg saat masuk rumah sakit)
+        4. Trestbps: yaitu tekanan darah istirahat (dalam mm Hg saat masuk rumah sakit)
         5. Chol : yaitu berisi kadar kolesterol serum [mg/dl]
-        6. Fbs : yaitu gula darah  120 mg/dl, dimana : \n
+        6. Fbs : yaitu gula darah puasa > 120 mg/dl, dimana : \n
             1 = benar, dan \n
             0 = salah 
         7. Restecg : hasil elektrokardiografi istirahat, dimana : \n
@@ -243,8 +244,8 @@ elif menu == 'Modelling':
         st.write('''
         Rumus untuk menghitung bobot kemiripan (similarity) dengan Nearest Neighbor digunakan rumus Euclidean.
         ''')
-        #image = Image.open('jarakecludian.png')
-        #st.image(image, caption='Rumus Jarak Euclidean')
+        image = Image.open('jarakecludian.png')
+        st.image(image, caption='Rumus Jarak Euclidean')
         st.write(
             """##### Tujuan Algoritma K-NN """)
         st.write('''
@@ -349,6 +350,9 @@ elif menu == 'Implementasi':
     #features_names.remove('label')
     # Scaled_features = hasil dari normalisasi
     scaled_features = pd.DataFrame(data_scaled, columns=features_names)
+    # save scaled 
+    scaler_filename = "df_scaled.save"
+    joblib.dump(scaler, scaler_filename)
 
     # Split Data
     X_training, X_test = train_test_split(scaled_features,test_size=0.2, random_state=1)#Nilai X training dan Nilai X testing
@@ -427,7 +431,8 @@ elif menu == 'Implementasi':
         if prediksi:
 
             input = [[age,	sex,	Cp,	trestbps,	chol,	fbs,	restecg,	thalach,	exang,	oldpeak,	slope,	ca,	thal]]
-            data_scaled = scaler.fit_transform(input)
+            minmax = joblib.load('df_scaled.save')
+            data_scaled = minmax.fit_transform(input)
             
 
            
