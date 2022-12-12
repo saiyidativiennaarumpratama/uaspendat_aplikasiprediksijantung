@@ -173,7 +173,7 @@ elif menu == 'Preprocessing':
     st.write("Jumlah Data", X.shape)
     st.write("""##### Data Training""", X_training)
     st.write("Jumlah Data Training", X_training.shape)
-    st.write("""##### Data Training""", X_test)
+    st.write("""##### Data Test""", X_test)
     st.write("Jumlah Data Test", X_test.shape)
 
 elif menu == 'Modelling':
